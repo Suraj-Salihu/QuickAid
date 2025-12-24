@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickAid - Emergency Response Platform</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        primaryDark: '#1e40af',
+                        emergency: '#ef4444',
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom styles for the scroll-reveal effect */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="#" class="text-2xl font-black text-primary tracking-tighter">🚀 QuickAid</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="hover:text-primary transition-colors font-medium">About</a>
+                    <a href="#process" class="hover:text-primary transition-colors font-medium">Process</a>
+                    <a href="#team" class="hover:text-primary transition-colors font-medium">Team</a>
+                    <a href="#contact" class="hover:text-primary transition-colors font-medium">Contact</a>
+                </div>
+                <a href="#contact" class="bg-primary text-white px-5 py-2 rounded-full font-bold hover:bg-primaryDark transition-all scale-95 hover:scale-100">Help Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 px-6 text-center max-w-5xl mx-auto reveal">
+        <div class="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-primaryDark flex items-center justify-center text-white text-4xl font-bold mx-auto mb-8 shadow-2xl shadow-primary/20 animate-pulse-slow">
+            QA
+        </div>
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-slate-900 dark:text-white">
+            Seconds Count. <span class="text-primary">Lives Matter.</span>
+        </h1>
+        <p class="text-xl text-slate-600 dark:text-slate-400 mb-10 leading-relaxed max-w-3xl mx-auto">
+            Born at the **flowdiary Hackathon 2025**, QuickAid is a high-speed emergency response platform designed by students to bridge the gap between crisis and care.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#process" class="bg-primary text-white px-10 py-4 rounded-full text-lg font-bold hover:shadow-xl hover:shadow-primary/30 transition-all transform hover:-translate-y-1">View our Solution</a>
+            <a href="#team" class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-10 py-4 rounded-full text-lg font-bold hover:bg-slate-50 transition-all">Meet the 17 Creators</a>
+        </div>
+    </header>
+
+    <!-- Stats/Impact Section -->
+    <section id="about" class="py-20 bg-white dark:bg-slate-800 reveal">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12 text-center">
+            <div>
+                <h3 class="text-4xl font-black text-primary mb-2">180s</h3>
+                <p class="text-slate-500 font-medium">Average Response Gap</p>
+            </div>
+            <div>
+                <h3 class="text-4xl font-black text-primary mb-2">100%</h3>
+                <p class="text-slate-500 font-medium">Student Driven</p>
+            </div>
+            <div>
+                <h3 class="text-4xl font-black text-primary mb-2">24/7</h3>
+                <p class="text-slate-500 font-medium">Available Protection</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works (Process) -->
+    <section id="process" class="py-24 px-6 reveal">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Our Rapid Process</h2>
+                <div class="h-1.5 w-24 bg-primary rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl transition-shadow group">
+                    <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center font-bold text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition-colors">1</div>
+                    <h3 class="text-2xl font-bold mb-4">Instant Alert</h3>
+                    <p class="text-slate-500 dark:text-slate-400">One tap triggers a distress signal with GPS coordinates and medical ID to the nearest facility.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl transition-shadow group">
+                    <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center font-bold text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition-colors">2</div>
+                    <h3 class="text-2xl font-bold mb-4">AI Routing</h3>
+                    <p class="text-slate-500 dark:text-slate-400">Our system calculates the fastest route, considering traffic patterns and hospital availability.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl transition-shadow group">
+                    <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center font-bold text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition-colors">3</div>
+                    <h3 class="text-2xl font-bold mb-4">Real-time Care</h3>
+                    <p class="text-slate-500 dark:text-slate-400">Paramedics arrive fully briefed on your history, saving precious minutes of questioning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-24 bg-slate-100 dark:bg-slate-900/50 reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">The QuickAid 17</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <!-- Helper for repeating cards -->
+                <script>
+                    const names = [
+                        "Amina Najib Yunusa", "Aliyu Sunusi", "Faisal Rabiu", "Muhammad Abdullahi",
+                        "Abubakar Sadiq Abdullahi", "Hassan Kabiru Lawan", "Mustapha Sani",
+                        "Abubakar Mustapha Sadiq", "Abduljalal Dalha Umar", "Lawan Muhammad Abdulhamid",
+                        "Abubakar Muhammad Hafiz", "Muhammad Yusuf Saleh", "Abdullahi Muhammad Muye",
+                        "Alameen Munir Ahmad", "Muhammad Khalid", "Muhammad Shehu", "Abdulhakhim Sulaiman"
+                    ];
+                    names.forEach(name => {
+                        document.write(`
+                            <div class="bg-white dark:bg-slate-800 p-4 rounded-2xl text-center shadow-sm hover:shadow-md transition-all border border-slate-200 dark:border-slate-700">
+                                <div class="w-12 h-12 bg-slate-200 dark:bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-3 font-bold text-primary">
+                                    ${name.charAt(0)}
+                                </div>
+                                <h4 class="text-sm font-bold leading-tight">${name}</h4>
+                            </div>
+                        `);
+                    });
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 px-6 reveal">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold mb-10 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="faq-item bg-white dark:bg-slate-800 p-6 rounded-2xl cursor-pointer border border-slate-100 dark:border-slate-700">
+                    <div class="flex justify-between items-center font-bold">
+                        <span>How does the offline mode work?</span>
+                        <span class="text-primary">+</span>
+                    </div>
+                    <p class="hidden mt-4 text-slate-500">QuickAid utilizes compressed SMS protocols to send location data when internet connectivity is low or unavailable.</p>
+                </div>
+                <div class="faq-item bg-white dark:bg-slate-800 p-6 rounded-2xl cursor-pointer border border-slate-100 dark:border-slate-700">
+                    <div class="flex justify-between items-center font-bold">
+                        <span>Can I add multiple emergency contacts?</span>
+                        <span class="text-primary">+</span>
+                    </div>
+                    <p class="hidden mt-4 text-slate-500">Yes, you can add up to 5 trusted contacts who will receive an automated alert with your location the moment you trigger an emergency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-primary reveal">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="text-white">
+                <h2 class="text-4xl font-bold mb-6">Let's Collaborate</h2>
+                <p class="text-blue-100 text-lg mb-8">Want to support the project or bring QuickAid to your community? Reach out to our student team.</p>
+                <div class="space-y-4">
+                    <p class="flex items-center gap-3"><span>📧</span> info.quickaid@gmail.com</p>
+                    <p class="flex items-center gap-3"><span>📞</span> +234 906 096 1201</p>
+                </div>
+            </div>
+            <form class="bg-white p-8 rounded-3xl shadow-2xl space-y-4">
+                <input type="text" placeholder="Name" class="w-full p-4 rounded-xl bg-slate-100 border-none focus:ring-2 focus:ring-primary outline-none">
+                <input type="email" placeholder="Email" class="w-full p-4 rounded-xl bg-slate-100 border-none focus:ring-2 focus:ring-primary outline-none">
+                <textarea placeholder="Message" rows="4" class="w-full p-4 rounded-xl bg-slate-100 border-none focus:ring-2 focus:ring-primary outline-none"></textarea>
+                <button class="w-full bg-primary text-white font-bold py-4 rounded-xl hover:bg-primaryDark transition-colors">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center text-slate-500 text-sm">
+        <p class="mb-2">🚀 QuickAid • flowdiary Hackathon 2025</p>
+        <p>© 2025 QuickAid Team. All rights reserved.</p>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="btt" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-xl hidden place-items-center hover:scale-110 transition-transform z-50">
+        ↑
+    </button>
+
+    <script>
+        // Intersection Observer for Reveal Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const p = item.querySelector('p');
+                const span = item.querySelector('span:last-child');
+                const isHidden = p.classList.contains('hidden');
+                
+                p.classList.toggle('hidden');
+                span.textContent = isHidden ? '-' : '+';
+            });
+        });
+
+        // Back to Top Logic
+        const btt = document.getElementById('btt');
+        window.onscroll = () => {
+            if (window.scrollY > 500) btt.classList.replace('hidden', 'grid');
+            else btt.classList.replace('grid', 'hidden');
+        };
+        btt.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    </script>
+</body>
+</html>
